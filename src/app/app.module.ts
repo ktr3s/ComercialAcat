@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroproductorComponent } from './productor/registroproductor/registroproductor.component';
 import { LoginproductorComponent } from './productor/loginproductor/loginproductor.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { LoginproductorComponent } from './productor/loginproductor/loginproduct
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot([
+    {path: 'registrarproductor',component:RegistroproductorComponent}
+   ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
