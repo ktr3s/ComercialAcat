@@ -1,1 +1,61 @@
-<p>loginproductor works!</p>
+<br>
+<div class="container">
+    <div class="container " style="width: 50rem; background-color:#36ad72 ">
+        <h2 style="font-family: Verdana;">
+            <p class="text-center font-weight-bold " style="color: white;">Iniciar sesión</p>
+        </h2>
+        <form action="" method="POST">
+            <h4 style="font-family: Verdana;"><span class="badge badge-secondary mx-auto">Datos
+                    requeridos</span></h4>
+            <div class="card">
+                <div class="card-body">
+                    <br>
+                    <img src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png"
+                     alt="Imagen iniciar sesión" class="rounded-circle mx-auto d-block" style="height: 140px; width: 140px;">
+                    <br>
+                    <div class="input-group mb-3 mx-auto" style="width: 400px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="nombreUsuario"
+                                style="font-family: Verdana; ">Nombre
+                                de usuario</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="nombre de usuario..."
+                            minlength="3" maxlength="30" required pattern="[A-Z a-z]{5,60}"
+                            title="Solo se permiten letras mayúsculas y minúsculas">
+                    </div>
+                    <div class="input-group mb-3 mx-auto" style="width: 400px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="contraseña"
+                                style="font-family: Verdana; ">Contraseña</span>
+                        </div>
+                        <input type="password" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="contraseña..." minlength="8"
+                            maxlength="30" required pattern="[A-Z a-z]{5,60}"
+                            title="Solo se permiten letras mayúsculas y minúsculas">
+                    </div>
+                </div>
+
+                <div class="container-fluid h-100" id="botones">
+                    <div class="row w-100 align-items-center">
+                        <div class="col text-right">
+                            <button type="submit" class="btn btn-success" style="font-family: Verdana;
+                            "><i class="fa fa-address-card"></i>Iniciar
+                                sesión</button>
+                        </div>
+
+                        <div class="col text-left">
+                            <button type="submit" class="btn btn-info" style="font-family: Verdana;
+            " routerLink="/registrarproductor"><i class="fa fa-address-card"></i>Registrarse</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+            </div>
+            <br>
+        </form>
+    </div>
+</div>
+<br>
