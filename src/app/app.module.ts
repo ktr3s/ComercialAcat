@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { RegistroproductorComponent } from './productor/registroproductor/registroproductor.component';
 import { LoginproductorComponent } from './productor/loginproductor/loginproductor.component';
 import { RouterModule } from '@angular/router';
+import { IngresarproductoComponent } from './productos/ingresarproducto/ingresarproducto.component';
+import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarproducto.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     HeaderComponent,
     RegistroproductorComponent,
-    LoginproductorComponent
+    LoginproductorComponent,
+    IngresarproductoComponent,
+    MostrarproductoComponent
   ],
   imports: [
     BrowserModule,
