@@ -11,6 +11,7 @@ import { LoginproductorComponent } from './productor/loginproductor/loginproduct
 import { RouterModule } from '@angular/router';
 import { IngresarproductoComponent } from './productos/ingresarproducto/ingresarproducto.component';
 import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarproducto.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,15 @@ import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarpro
     RegistroproductorComponent,
     LoginproductorComponent,
     IngresarproductoComponent,
-    MostrarproductoComponent
+    MostrarproductoComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
     {path: 'registrarproductor',component:RegistroproductorComponent},
-    {path: 'loginproductor',component:LoginproductorComponent}
+    {path: 'loginproductor',component:LoginproductorComponent},
+    {path: '**', component: PageNotFoundComponent}
    ]),
   ],
   providers: [],
