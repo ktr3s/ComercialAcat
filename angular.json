@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "comercialAcat"
+    }
+  },
+  "defaultProject": "comercialAcat",
+  "cli": {
+    "analytics": "ab72f7cf-4b64-48c7-aa08-a5ae0e4bcc0d"
+  }
 }
