@@ -1,1 +1,100 @@
-<p>registroproductor works!</p>
+<br>
+<div class="container " style="width: 50rem; background-color:#36ad72 ">
+    <h2>
+        <p class="text-center font-weight-bold " style="font-family: Verdana;font-size: 60px; color: white;">
+            Registrar </p>
+    </h2>
+    <form action="" method="POST">
+        <h4><span class="badge badge-secondary mx-auto">Datos requeridos</span></h4>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="nombre"
+                                        style="font-family: Verdana; font-size: 16px">Nombre</span>
+                                </div>
+                                <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre"
+                                    minlength="3" maxlength="30" required pattern="[A-Z a-z]{3,30}"
+                                    title="Solo se permiten letras mayúsculas y minúsculas">
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="apellido"
+                                        style="font-family: Verdana; font-size: 16px">Apellido</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-default" placeholder="Ingrese su apellido"
+                                    minlength="3" maxlength="30" required pattern="[A-Z a-z]{5,60}"
+                                    title="Solo se permiten letras mayúsculas y minúsculas">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="email"
+                                            style="font-family: Verdana; font-size: 16px">Email</span>
+                                    </div>
+                                    <input type="email" class="form-control" name="correo" aria-describedby="emailHelp"
+                                        placeholder="Ingrese su direccion de correo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <div class="input-group mb-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="clave"
+                                            style="font-family: Verdana; font-size: 16px">Contraseña</span>
+                                    </div>
+                                    <input type="password" class="form-control" name="clave"
+                                        placeholder="Ingrese una contraseña">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="telefono"
+                                            style="font-family: Verdana; font-size: 16px">Teléfono</span>
+                                    </div>
+                                    <input type="tel" class="form-control" name="telefono"
+                                        placeholder="Ingrese su numero de teléfono" minlength="9" maxlength="14"
+                                        required pattern="[0-9]+" title="Números del 0-9">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container-fluid h-100">
+                <div class="row w-100 align-items-center">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i>
+                            Guardar</button>
+                    </div>
+
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-danger"><i class="fa fa-window-close"></i>
+                            Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+    </form>
+</div>
+<br>
+
