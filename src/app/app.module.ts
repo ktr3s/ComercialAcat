@@ -26,7 +26,8 @@ import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarpro
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-    {path: 'registrarproductor',component:RegistroproductorComponent}
+    {path: 'registrarproductor',component:RegistroproductorComponent},
+    {path: 'loginproductor',component:LoginproductorComponent}
    ]),
   ],
   providers: [],
