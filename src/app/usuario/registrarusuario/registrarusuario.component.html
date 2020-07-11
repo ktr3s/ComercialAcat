@@ -1,1 +1,110 @@
-<p>registrarusuario works!</p>
+<div class="container " style="width: 50rem; background-color:#36ad72 ">
+
+    <h2 style="font-family:Verdana;
+  font-size: 60px;">
+        <p class="text-div font-weight-bold " style="color: white;">Datos de los Usuarios</p>
+    </h2>
+
+    <form action="" method="POST">
+
+        <h4 style="font-family: Verdana;
+  font-size: 44px;"><span class="badge badge-secondary mx-auto">Ingresar</span></h4>
+        <div class="card">
+
+            <div class="card-body">
+                <br>
+
+                <!--                	<div>
+<img src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png" alt="Imagen iniciar sesión" class="rounded-circle" style="height: 140px; width: 140px;"></div>-->
+
+                <div class="mx-auto">
+                    <div class="input-group mb-3" style="width: 420px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="nombreUsuario"
+                                style="font-family:Verdana; font-size: 16px">Nombre</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Ingrese el Nombre ...."
+                            minlength="3" maxlength="30" required pattern="[A-Z a-z]{1,60}"
+                            title="Solo se permiten letras mayúsculas y minúsculas">
+                    </div>
+                </div>
+
+                <div class="mx-auto">
+                    <div class="input-group mb-3" style="width: 440px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="nombreApellido"
+                                style="font-family: Verdana; font-size: 16px">Apellido</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Ingreses el Apellido..."
+                            minlength="3" maxlength="30" required pattern="[A-Z a-z]{1,60}"
+                            title="Solo se permiten letras mayúsculas y minúsculas">
+                    </div>
+                </div>
+
+                <div class="mx-auto">
+                    <div class="input-group mb-3" style="width: 440px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="correoElectronico"
+                                style="font-family: Verdana; font-size: 16px">Correo electrónico</span>
+                        </div>
+                        <input type="email" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="ejem:ana98@outlook.es..."
+                            minlength="15" maxlength="60" required pattern="{1,60}"
+                            title="Ingrese un correo electrónico válido">
+                    </div>
+                </div>
+
+
+                <div class="mx-auto">
+                    <div class="input-group mb-3" style="width: 440px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="contraseña"
+                                style="font-family: Verdana; font-size: 16px">Contraseña</span>
+                        </div>
+                        <input type="password" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Ingrese la Contraseña..."
+                            minlength="8" maxlength="30" required pattern="[A-Z a-z 0-9]{1,60}">
+                    </div>
+                </div>
+
+                <div class="mx-auto">
+                    <div class="input-group mb-3" style="width: 440px; ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="Telefono"
+                                style="font-family: Verdana; font-size: 16px">Telefono</span>
+                        </div>
+                        <input type="tel" class="form-control" name="telefono" aria-describedby="emailHelp"
+                            maxlength="10" placeholder="Ingrese su numero de teléfono" minlength="9" maxlength="14"
+                            required pattern="[0-9]+" title="Números del 0-9">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="container-fluid h-100" id="botones">
+                <div class="row w-100 align-items-div">
+                    <div class="col text-right">
+                        <button type="submit" class="btn btn-success" id="btnRegistrarse"><i
+                                class="fas fa-address-card"></i>Registrarse</button>
+                    </div>
+
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-danger" id="btnCancelar"><i
+                                class="far fa-address-card"></i>Cancelar</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <br>
+        </div>
+        <br>
+
+</div>
+</form>
+</div>
