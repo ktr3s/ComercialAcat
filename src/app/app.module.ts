@@ -34,6 +34,7 @@ import { RegistrarusuarioComponent } from './usuario/registrarusuario/registraru
     {path: 'registrarproductor',component:RegistroproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
     {path: 'registrarproducto',component:IngresarproductoComponent},
+    {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: '**', component: PageNotFoundComponent}
    ]),
   ],
