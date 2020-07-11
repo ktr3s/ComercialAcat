@@ -14,6 +14,7 @@ import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarpro
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegistrarusuarioComponent } from './usuario/registrarusuario/registrarusuario.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { RegistrarusuarioComponent } from './usuario/registrarusuario/registraru
     RouterModule.forRoot([
     {path: 'registrarproductor',component:RegistroproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
+    {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: '**', component: PageNotFoundComponent}
    ]),
   ],
