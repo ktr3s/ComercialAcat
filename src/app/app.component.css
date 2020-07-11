@@ -3,6 +3,7 @@ header,footer,nav {
 }
 header,footer,nav,body {
     font-style: verdana;
+    color: white;
 }
 body{
     background-color: gainsboro;
