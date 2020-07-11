@@ -1,0 +1,9 @@
+header,footer,nav {
+    background-color: #29814A;
+}
+header,footer,nav,body {
+    font-style: verdana;
+}
+body{
+    background-color: gainsboro;
+}
