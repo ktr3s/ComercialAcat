@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { IngresarproductoComponent } from './productos/ingresarproducto/ingresarproducto.component';
 import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarproducto.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RegistrarusuarioComponent } from './usuario/registrarusuario/registrarusuario.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginproductorComponent,
     IngresarproductoComponent,
     MostrarproductoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RegistrarusuarioComponent
   ],
   imports: [
     BrowserModule,
