@@ -35,6 +35,7 @@ import { ModificarproductorComponent } from './productor/modificarproductor/modi
     RouterModule.forRoot([
     {path: 'registrarproductor',component:RegistroproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
+    {path: 'modificarproductor',component:ModificarproductorComponent},
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: '**', component: PageNotFoundComponent}
