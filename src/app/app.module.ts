@@ -13,6 +13,7 @@ import { IngresarproductoComponent } from './productos/ingresarproducto/ingresar
 import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarproducto.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegistrarusuarioComponent } from './usuario/registrarusuario/registrarusuario.component';
+import { ModificarproductorComponent } from './productor/modificarproductor/modificarproductor.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RegistrarusuarioComponent } from './usuario/registrarusuario/registraru
     IngresarproductoComponent,
     MostrarproductoComponent,
     PageNotFoundComponent,
-    RegistrarusuarioComponent
+    RegistrarusuarioComponent,
+    ModificarproductorComponent
   ],
   imports: [
     BrowserModule,
