@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RegistrarusuarioComponent } from './usuario/registrarusuario/registrarusuario.component';
 import { ModificarproductorComponent } from './productor/modificarproductor/modificarproductor.component';
 import { ModificarproductoComponent } from './productos/modificarproducto/modificarproducto.component';
+import { ModificarestadoproductoComponent } from './productos/modificarestadoproducto/modificarestadoproducto.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ModificarproductoComponent } from './productos/modificarproducto/modifi
     PageNotFoundComponent,
     RegistrarusuarioComponent,
     ModificarproductorComponent,
-    ModificarproductoComponent
+    ModificarproductoComponent,
+    ModificarestadoproductoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { ModificarproductoComponent } from './productos/modificarproducto/modifi
     {path: 'modificarproductor',component:ModificarproductorComponent},
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'modificarproducto',component:ModificarproductoComponent},
+    {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: '**', component: PageNotFoundComponent}
    ]),
