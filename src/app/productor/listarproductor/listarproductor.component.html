@@ -1,0 +1,47 @@
+<br>
+<div class="container">
+<div class="col-lg">
+    <h2 style="color: black;">Buscar</h2>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID usuario</th>
+                <th>Nombre</th>
+                <th>Apelllido</th>
+                <th>Correo</th>
+                <th>Clave</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr *ngFor="let productor of productores">
+                <td>{{productor.idproductor}}</td>
+                <td>{{productor.nombreproductor}}</td>
+                <td>{{productor.apellidoproductor}}</td>
+                <td>{{productor.emailproductor}}</td>
+                <td>{{productor.claveproductor}}</td>
+                <td>{{productor.telefonoproductor}}</td>
+                <td>
+                    <a class="btn btn-secondary col-sm-8 " routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Modificar</a>
+                    <br>
+                    <a class="btn btn-danger col-sm-8" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+{{productores | json}}

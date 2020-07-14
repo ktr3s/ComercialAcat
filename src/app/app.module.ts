@@ -14,7 +14,11 @@ import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarpro
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegistrarusuarioComponent } from './usuario/registrarusuario/registrarusuario.component';
 import { ModificarproductorComponent } from './productor/modificarproductor/modificarproductor.component';
+import { ListarproductorComponent } from './productor/listarproductor/listarproductor.component';
+import { DetalleproductorComponent } from './productor/detalleproductor/detalleproductor.component';
 
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,16 +32,26 @@ import { ModificarproductorComponent } from './productor/modificarproductor/modi
     MostrarproductoComponent,
     PageNotFoundComponent,
     RegistrarusuarioComponent,
-    ModificarproductorComponent
+    ModificarproductorComponent,
+    ListarproductorComponent,
+    DetalleproductorComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
+      //Productor------------------------------------------------------
+    {path: 'listarproductor',component:ListarproductorComponent},
+    {path: 'detalleproductor',component:DetalleproductorComponent},
     {path: 'registrarproductor',component:RegistroproductorComponent},
+    {path: 'modificarproductor/:idproductor',component:ModificarproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
+    //---------------------------------------------------------------
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
-    {path: '**', component: PageNotFoundComponent}
+    {path: '**', component: PageNotFoundComponent},
+    
    ]),
   ],
   providers: [],
