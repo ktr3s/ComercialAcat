@@ -16,7 +16,7 @@ import { RegistrarusuarioComponent } from './usuario/registrarusuario/registraru
 import { ModificarproductorComponent } from './productor/modificarproductor/modificarproductor.component';
 import { ListarproductorComponent } from './productor/listarproductor/listarproductor.component';
 import { DetalleproductorComponent } from './productor/detalleproductor/detalleproductor.component';
-
+import { ModificarestadoproductoComponent } from './productos/modificarestadoproducto/modificarestadoproducto.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
@@ -33,6 +33,7 @@ import {FormsModule} from '@angular/forms';
     PageNotFoundComponent,
     RegistrarusuarioComponent,
     ModificarproductorComponent,
+    ModificarestadoproductoComponent,
     ListarproductorComponent,
     DetalleproductorComponent
   ],
@@ -49,6 +50,7 @@ import {FormsModule} from '@angular/forms';
     {path: 'loginproductor',component:LoginproductorComponent},
     //---------------------------------------------------------------
     {path: 'registrarproducto',component:IngresarproductoComponent},
+    {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: '**', component: PageNotFoundComponent},
     
