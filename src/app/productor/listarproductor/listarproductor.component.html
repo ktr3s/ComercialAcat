@@ -25,9 +25,9 @@
                 <td>{{productor.claveproductor}}</td>
                 <td>{{productor.telefonoproductor}}</td>
                 <td>
-                    <a class="btn btn-secondary col-sm-8 " routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Modificar</a>
+                    <a class="btn btn-secondary col-sm-9 " routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
                     <br>
-                    <a class="btn btn-danger col-sm-8" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i>Eliminar</a>
+                    <a class="btn btn-danger col-sm-9" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i>Eliminar</a>
                 </td>
             </tr>
         </tbody>
@@ -44,4 +44,3 @@
         });
     });
 </script>
-{{productores | json}}
