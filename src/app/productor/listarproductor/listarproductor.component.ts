@@ -30,6 +30,15 @@ export class ListarproductorComponent implements OnInit {
   }
 
   borrar(idproductor: number){
-    alert('Esta seguro de eliminar el productor con ID = '+idproductor);
+    this.productorService.delete(idproductor).subscribe(
+      data => {
+        alert('Productor eliminado');
+        this.cargarProductores();
+      },
+      err=>{
+        alert(err.error.mensaje + ' Fallo');
+      }
+
+    );
   }
 }
