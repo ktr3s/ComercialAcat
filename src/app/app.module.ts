@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,8 +17,12 @@ import { ModificarproductorComponent } from './productor/modificarproductor/modi
 import { ListarproductorComponent } from './productor/listarproductor/listarproductor.component';
 import { DetalleproductorComponent } from './productor/detalleproductor/detalleproductor.component';
 import { ModificarestadoproductoComponent } from './productos/modificarestadoproducto/modificarestadoproducto.component';
+import { ListarusuariosComponent } from './usuario/listarusuarios/listarusuarios.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { ModificarusuarioComponent } from './usuario/modificarusuario/modificarusuario.component';
+import { ModificarusuariosComponent } from './usuario/modificarusuarios/modificarusuarios.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +39,10 @@ import {FormsModule} from '@angular/forms';
     ModificarproductorComponent,
     ModificarestadoproductoComponent,
     ListarproductorComponent,
-    DetalleproductorComponent
+    DetalleproductorComponent,
+    ListarusuariosComponent,
+    ModificarusuarioComponent,
+    ModificarusuariosComponent
   ],
   imports: [
     BrowserModule,
@@ -48,11 +55,16 @@ import {FormsModule} from '@angular/forms';
     {path: 'registrarproductor',component:RegistroproductorComponent},
     {path: 'modificarproductor/:idproductor',component:ModificarproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
-    //---------------------------------------------------------------
+    //Producto---------------------------------------------------------------
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
-    {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: 'mostrarproducto',component:MostrarproductoComponent},
+    //Usuario----------------------------------------------------------
+    {path: 'registrarusuario',component:RegistrarusuarioComponent},
+    {path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
+    {path: 'modificarusuarios',component:ModificarusuariosComponent},
+    {path: 'listarusuarios',component:ListarusuariosComponent},
+    //--------------------------------------------------------------
     {path: '**', component: PageNotFoundComponent},
      
     

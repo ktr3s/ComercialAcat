@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+<div class="col-lg">
+    <h2 style="color: black;">Buscar</h2>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID usuario</th>
+                <th>Nombre</th>
+                <th>Apelllido</th>
+                <th>Correo</th>
+                <th>Clave</th>
+                <th>Teléfono</th>
+                <th>Direccion</th>
+                <th>Acciones</th>
+                
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{usuario.idusuario}}</td>
+                <td>{{usuario.nombreusuario}}</td>
+                <td>{{usuario.apellidousuario}}</td>
+                <td>{{usuario.emailusuario}}</td>
+                <td>{{usuario.claveusuario}}</td>
+                <td>{{usuario.telefonousuario}}</td>
+                <td>{{usuario.direccionusuario}}</td>
+                <td>
+                    <a class="btn btn-secondary col-sm-9 " routerLink="/modificarusuario/{{usuario.idusuario}}" ><i class="fa fa-edit"></i>Editar</a>
+                    <br>
+                    <a class="btn btn-danger col-sm-9" (click)="borrar(usuario.idusuario)"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
