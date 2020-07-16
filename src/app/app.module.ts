@@ -50,7 +50,7 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     FormsModule,
     RouterModule.forRoot([
       //Productor------------------------------------------------------
-    {path: 'listarproductor',component:ListarproductorComponent},
+    {path: 'listarproductores',component:ListarproductorComponent},
     {path: 'detalleproductor',component:DetalleproductorComponent},
     {path: 'registrarproductor',component:RegistroproductorComponent},
     {path: 'modificarproductor/:idproductor',component:ModificarproductorComponent},
@@ -58,7 +58,7 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     //Producto---------------------------------------------------------------
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
-    {path: 'mostrarproducto',component:MostrarproductoComponent},
+    {path: 'listarproductos',component:MostrarproductoComponent},
     //Usuario----------------------------------------------------------
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
@@ -66,8 +66,6 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     {path: 'listarusuarios',component:ListarusuariosComponent},
     //--------------------------------------------------------------
     {path: '**', component: PageNotFoundComponent},
-     
-    
    ]),
   ],
   providers: [],
