@@ -52,7 +52,9 @@ import {FormsModule} from '@angular/forms';
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
+    {path: 'mostrarproducto',component:MostrarproductoComponent},
     {path: '**', component: PageNotFoundComponent},
+     
     
    ]),
   ],
