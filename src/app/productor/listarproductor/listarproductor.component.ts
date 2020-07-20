@@ -25,6 +25,7 @@ export class ListarproductorComponent implements OnInit {
       },
       err => {
         console.log(err);
+        
       }
     )
   }

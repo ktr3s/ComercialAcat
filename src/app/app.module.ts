@@ -20,7 +20,6 @@ import { ModificarestadoproductoComponent } from './productos/modificarestadopro
 import { ListarusuariosComponent } from './usuario/listarusuarios/listarusuarios.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { ModificarusuarioComponent } from './usuario/modificarusuario/modificarusuario.component';
 import { ModificarusuariosComponent } from './usuario/modificarusuarios/modificarusuarios.component';
 
 
@@ -41,7 +40,6 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     ListarproductorComponent,
     DetalleproductorComponent,
     ListarusuariosComponent,
-    ModificarusuarioComponent,
     ModificarusuariosComponent
   ],
   imports: [
@@ -61,8 +59,8 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     {path: 'listarproductos',component:MostrarproductoComponent},
     //Usuario----------------------------------------------------------
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
-    {path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
-    {path: 'modificarusuarios',component:ModificarusuariosComponent},
+    //{path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
+    {path: 'modificarusuarios/:idusuario',component:ModificarusuariosComponent},
     {path: 'listarusuarios',component:ListarusuariosComponent},
     //--------------------------------------------------------------
     {path: '**', component: PageNotFoundComponent},

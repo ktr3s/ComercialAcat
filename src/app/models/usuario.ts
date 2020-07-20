@@ -7,8 +7,7 @@ export class Usuario {
     telefonousuario: string;
     direccionusuario: string;
 
-
-
+    
     constructor(nombreusuario: string,apellidousuario: string,emailusuario: string,claveusuario: string,telefonousuario: string, direccionusuario: string){
         this.nombreusuario = nombreusuario;
         this.apellidousuario = apellidousuario;
@@ -16,7 +15,6 @@ export class Usuario {
         this.claveusuario = claveusuario;
         this.telefonousuario = telefonousuario;
         this.direccionusuario = direccionusuario;
-    
     }
 
 }

@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ModificarproductorComponent implements OnInit {
 
+  
   productor: Productor = null;
   constructor(
     private productorService: ProductorService,
