@@ -23,8 +23,9 @@ export class IngresarproductoComponent implements OnInit {
     onCreate(): void{
       const producto =new Producto(this.nombreproducto,this.precioproducto,this.pesoproducto,this.estadoproducto,this.categoriaproducto);
       this.productoService.save(producto).subscribe(
+        
         data => {
-          alert('Producto guardado con exito');
+          alert('Producto guardado con exito!');
         },
         err=>{
           alert(err.error.mensaje + 'Fallo');
