@@ -1,13 +1,13 @@
 <br>
-<div class="container " style="width: 50rem; background-color:#36ad72 ">
+<div class="container " *ngIf="producto" style="width: 50rem; background-color:#36ad72 ">
 
   <h2 style="font-family: Verdana;font-size: 60px;">
     <p class="text-center font-weight-bold " style="color: white;">Modificar datos</p>
   </h2>
 
-  <form action="" method="POST">
+  <form (ngSubmit)="onUpdate()">
 
-    <h4 style="font-family: Verdana;font-size: 44px;"><span class="badge badge-secondary mx-auto">Datos</span></h4>
+    <h4 style="font-family: Verdana;font-size: 44px;"><label class="badge badge-secondary mx-auto">Datos</label></h4>
     <div class="card">
       <div class="card-body">
 
@@ -20,11 +20,11 @@
             <div class="mx-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="nombreProducto"
-                    style="font-family: Verdana; font-size: 16px">Nombre de producto</span>
+                  <label class="input-group-text" for="nombreproducto"
+                    style="font-family: Verdana; font-size: 16px">Nombre de producto</label>
                 </div>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="nombre de producto..." minlength="3"
+                  aria-describedby="inputGroup-sizing-default" id="nombreproducto" name="nombreproducto" [(ngModel)]="producto.nombreproducto" placeholder="nombre de producto..." minlength="3"
                   maxlength="30" required pattern="[A-Z a-z]{1,60}"
                   title="Solo se permiten letras mayúsculas y minúsculas">
               </div>
@@ -38,11 +38,11 @@
             <div class="mx-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="pesoProducto" style="font-family: Verdana; font-size: 16px">Peso de
-                    producto</span>
+                  <label class="input-group-text" for="pesoproducto" style="font-family: Verdana; font-size: 16px">Peso de
+                    producto</label>
                 </div>
                 <input type="number" min=1 max=1000 class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="Peso de producto..." required
+                  aria-describedby="inputGroup-sizing-default" id="pesoproducto" name="pesoproducto" [(ngModel)]="producto.pesoproducto"placeholder="Peso de producto..." required
                   pattern="[0-9]{0,60}" title="Solo se permiten numeros">
               </div>
             </div>
@@ -55,11 +55,11 @@
             <div class="mx-auto">
               <div class="input-group mb-3" style="width: 440px;">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="precioProducto"
-                    style="font-family: Verdana; font-size: 16px; ">Precio de producto</span>
+                  <label class="input-group-text" for="precioproducto"
+                    style="font-family: Verdana; font-size: 16px; ">Precio de producto</label>
                 </div>
-                <input type="number" min=1 max=500 class="form-control" aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default" placeholder="Precio de producto..." required
+                <input type="number" min=1 max=500 class="form-control" id="precioproducto" name="precioproducto"aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default" [(ngModel)]="producto.precioproducto"placeholder="Precio de producto..." required
                   pattern="[0-9]{0,60}" title="Solo se permiten numeros">
               </div>
             </div>

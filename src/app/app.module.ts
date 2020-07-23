@@ -21,7 +21,7 @@ import { ListarusuariosComponent } from './usuario/listarusuarios/listarusuarios
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { ModificarusuariosComponent } from './usuario/modificarusuarios/modificarusuarios.component';
-
+import { ModificarproductoComponent } from './productos/modificarproducto/modificarproducto.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,7 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     ListarproductorComponent,
     DetalleproductorComponent,
     ListarusuariosComponent,
+    ModificarproductoComponent,
     ModificarusuariosComponent
   ],
   imports: [
@@ -56,6 +57,7 @@ import { ModificarusuariosComponent } from './usuario/modificarusuarios/modifica
     //Producto---------------------------------------------------------------
     {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
+    {path: 'modificarproducto/:idproducto',component:ModificarproductoComponent},
     {path: 'listarproductos',component:MostrarproductoComponent},
     //Usuario----------------------------------------------------------
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
