@@ -11,7 +11,7 @@ import {Producto} from '../../models/producto';
 export class MostrarproductoComponent implements OnInit {
 
   productos: Producto[];
-
+  filterProducto='';
   constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
