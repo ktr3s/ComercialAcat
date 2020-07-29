@@ -1,0 +1,32 @@
+<body>
+<div class="container-fluid margen mx-auto">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div *ngFor="let producto of productos">
+                        <div class="col-md-4">
+                            <div class="card margencards" style="width: 14rem; height:25rem;">
+                                <div class="card-body">
+                                    <a href=""><img src="assets/img/granossecos.png" alt="Imagen de producto"
+                                            height="200px" width="170px" alt="..."></a>
+                                    <a class="verdetxt"  href="">
+                                        <h4 class="card-title ">{{producto.nombreproducto}}</h4>
+                                    </a>
+                                    <h6>Categoria: {{producto.categoriaproducto}}</h6>
+                                    <h6>Pecio: {{producto.precioproducto}}</h6>
+                                    <h6>Peso: {{producto.pesoproducto}}</h6>
+                                    <div class="text-center">
+                                        <a class="btn btn-warning" href="">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+</body>

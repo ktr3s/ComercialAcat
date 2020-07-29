@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-//import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroproductorComponent } from './productor/registroproductor/registroproductor.component';
 import { LoginproductorComponent } from './productor/loginproductor/loginproductor.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { IngresarproductoComponent } from './productos/ingresarproducto/ingresarproducto.component';
 import { MostrarproductoComponent } from './productos/mostrarproducto/mostrarproducto.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -22,6 +21,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { ModificarusuariosComponent } from './usuario/modificarusuarios/modificarusuarios.component';
 import { ModificarproductoComponent } from './productos/modificarproducto/modificarproducto.component';
+import { AdminComponent } from './admin/admin.component';
+import { ListarproductoscategoriaComponent } from './productos/listarproductoscategoria/listarproductoscategoria.component';
+import { ListarproductosclienteComponent } from './cliente/listarproductoscliente/listarproductoscliente.component';
+import { HomeComponent } from './home/home.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,13 +45,21 @@ import { ModificarproductoComponent } from './productos/modificarproducto/modifi
     DetalleproductorComponent,
     ListarusuariosComponent,
     ModificarproductoComponent,
-    ModificarusuariosComponent
+    ModificarusuariosComponent,
+    AdminComponent,
+    ListarproductoscategoriaComponent,
+    ListarproductosclienteComponent,
+    HomeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
+    RouterModule.forRoot(
+      
+      [
+        
       //Productor------------------------------------------------------
     {path: 'listarproductores',component:ListarproductorComponent},
     {path: 'detalleproductor',component:DetalleproductorComponent},
@@ -59,16 +71,25 @@ import { ModificarproductoComponent } from './productos/modificarproducto/modifi
     {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
     {path: 'modificarproducto/:idproducto',component:ModificarproductoComponent},
     {path: 'listarproductos',component:MostrarproductoComponent},
+    {path: 'listarproductoscategoria/:categoriaproducto',component:ListarproductoscategoriaComponent},
     //Usuario----------------------------------------------------------
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     //{path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
     {path: 'modificarusuarios/:idusuario',component:ModificarusuariosComponent},
     {path: 'listarusuarios',component:ListarusuariosComponent},
-    //--------------------------------------------------------------
+    //Cliente--------------------------------------------------------------
+    {path: 'listartodoslosproductos',component:ListarproductosclienteComponent},
+    {path: '',component:HomeComponent},
+    
     {path: '**', component: PageNotFoundComponent},
+    
+    
    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
+

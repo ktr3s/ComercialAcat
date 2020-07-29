@@ -1,0 +1,46 @@
+.color-prod-cliente{
+    color: #FFB600;
+}
+
+
+.pantonetext {
+    color: #29814A;
+}
+
+.verdetxt{
+    color: #29814A
+}
+
+em,h6 {
+    color: #29814A 
+}
+
+.margen {
+    margin-top: 30px;
+    margin-block-end: 30px;
+}
+
+.margencards {
+    background-color: #ffffff;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 15px;
+    margin-block-end: 15px;
+    border-right:3px solid #29814A;
+    border-left: 0px solid #29814A;
+    border-top: 0px solid #29814A;
+    border-bottom: 0px solid #29814A;
+}
+body {
+    font-style: verdana;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------------*/
