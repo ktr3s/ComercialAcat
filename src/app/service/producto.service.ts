@@ -12,18 +12,23 @@ export class ProductoService {
  
   productoURL = 'http://localhost:8080/producto/'
 
+  
   constructor(private httpClient: HttpClient) { }
 
   public listar(): Observable<Producto[]>{
-    return this.httpClient.get<Producto[]>(this.productoURL+'listar')
+    return this.httpClient.get<Producto[]>(this.productoURL+'listar');
+  }
+
+  public listarcategoria(categoriaproducto: string): Observable<Producto[]>{
+    return this.httpClient.get<Producto[]>(this.productoURL+`/listar/${categoriaproducto}`);
   }
 
   public detail(idproducto: number): Observable<Producto>{
-    return this.httpClient.get<Producto>(this.productoURL+`detail/${idproducto}`)
+    return this.httpClient.get<Producto>(this.productoURL+`detail/${idproducto}`);
   }
 
   public detailName(nombreproducto: string): Observable<Producto>{
-    return this.httpClient.get<Producto>(this.productoURL+`detailname/${nombreproducto}`)
+    return this.httpClient.get<Producto>(this.productoURL+`detailname/${nombreproducto}`);
   }
 
   public save(producto: Producto):Observable<any>{
@@ -37,4 +42,5 @@ export class ProductoService {
   public delete(idproducto: number ): Observable<any>{
     return this.httpClient.delete<any>(this.productoURL+`delete/${idproducto}`);
   }
+
 }
