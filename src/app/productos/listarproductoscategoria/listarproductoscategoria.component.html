@@ -1,0 +1,46 @@
+<br>
+<div class="container">
+<div class="col-lg">
+    <h2 style="color: black;">Buscar</h2>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID Producto</th>
+                <th>Nombre Producto</th>
+                <th>Precio</th>
+                <th>Peso</th>
+                <th>Estado</th>
+                <th>Categoria</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr *ngFor="let producto of productos">
+                <td>{{producto.idproducto}}</td>
+                <td>{{producto.nombreproducto}}</td>
+                <td>{{producto.precioproducto}}</td>
+                <td>{{producto.pesoproducto}}</td>
+                <td>{{producto.estadoproducto}}</td>
+                <td>{{producto.categoriaproducto}}</td>
+                <td>
+                    <a class="btn btn-info col-sm-9 " routerLink="/modificarproducto/{{producto.idproducto}}" ><i class="fa fa-edit"></i>Editar</a>
+                    <br>
+                    <a class="btn btn-danger col-sm-9" (click)="borrar(producto.idproducto)"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
