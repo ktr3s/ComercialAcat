@@ -1,13 +1,13 @@
 <br>
-<div class="container " style="width: 50rem; background-color:#36ad72 ">
+<div class="container " style="width: 50rem; background-color:#29814A; ">
 
-  <h2 style="font-family: Verdana;font-size: 60px;">
+  <h2 >
     <p class="text-center font-weight-bold " style="color: white;">Registrar producto</p>
   </h2>
 
   <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
-    <h4 style="font-family: Verdana;font-size: 44px;"><label class="badge badge-secondary mx-auto">Datos
+    <h4 ><label class="badge badge-secondary mx-auto">Datos
         requeridos</label></h4>
     <div class="card">
       <div class="card-body">
@@ -94,10 +94,10 @@
                 </div>
                 <select id="categoriaproducto" name="categoriaproducto"  [(ngModel)]="categoriaproducto" class="custom-select" >
                   <option selected>Seleccionar...</option>
-                  <option value="Granos secos">Granos secos</option>
-                  <option value="Cereales">Cereales</option>
-                  <option value="Frutas">Frutas</option>
-                  <option value="Verduras">Verduras</option>
+                  <option value="granos">Granos secos</option>
+                  <option value="cereales">Cereales</option>
+                  <option value="fruta">Frutas</option>
+                  <option value="verduras">Verduras</option>
                 </select>
               </div>
             </div>

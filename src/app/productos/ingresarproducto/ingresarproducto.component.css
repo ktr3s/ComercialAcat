@@ -1,0 +1,10 @@
+header,footer,nav {
+    background-color: #29814A;
+}
+header,footer,nav,body {
+    font-style: verdana ;
+    color: white;
+}
+body{
+    background-color: white;
+}
