@@ -1,0 +1,35 @@
+<br>
+<div class="container " *ngIf="producto">
+  <div class="card mx-auto" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col">
+        <img src="assets/img/granossecos.png" class="card-img" alt="...">
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <h5 class="card-title text-dark">Producto</h5>
+          <h6 class=" text-dark">Nombre: {{producto.nombreproducto}}</h6>
+          <h6 class=" text-dark">Precio: $ {{producto.precioproducto}}</h6>
+          <h6 class=" text-dark">Peso: {{producto.pesoproducto}}</h6>
+          <h6 class=" text-dark">Estado: {{producto.estadoproducto}}</h6>
+          <h6 class=" text-dark">Categoria: {{producto.categoriaproducto}}</h6>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <h5 class="card-title text-dark">Descripcion</h5>
+          <p class="card-text text-dark">{{producto.descripcionproducto}}</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a class="btn btn-outline-primary mx-auto text-dark " (click)="volver()">
+          <i class="fa fa-arrow-circle-left"></i>Volver
+      </a>
+      <a class="btn btn-outline-secondary mx-auto text-dark" routerLink="/modificarproducto/{{producto.idproducto}}" ><i class="fa fa-edit"></i>Editar</a>
+  </div>
+  <br>
+  </div>
+</div>
+<br>

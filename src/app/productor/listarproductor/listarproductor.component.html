@@ -14,6 +14,7 @@
                 <th>Clave</th>
                 <th>Teléfono</th>
                 <th>Acciones</th>
+                <th>Productos</th>
             </tr>
         </thead>
         <tbody id="myTable">
@@ -25,11 +26,14 @@
                 <td>{{productor.claveproductor}}</td>
                 <td>{{productor.telefonoproductor}}</td>
                 <td>
-                    <a class="btn btn-secondary col-sm-9 " routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
+                    <a class="btn btn-primary col " routerLink="/detalleproductor/{{productor.idproductor}}" ><i class="fa fa-eye"></i>Ver</a>
                     <br>
-                    <a class="btn btn-secondary col-sm-9 " routerLink="/listarproductos/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Ver productos</a>
+                    <a class="btn btn-secondary col " routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
                     <br>
-                    <a class="btn btn-danger col-sm-9" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i>Eliminar</a>
+                    <a class="btn btn-danger col" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary col  " routerLink="/listarproductos/{{productor.idproductor}}" ><i class="fa fa-eye"></i>Ver productos</a>
                 </td>
             </tr>
         </tbody>

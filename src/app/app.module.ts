@@ -26,6 +26,8 @@ import { ListarproductoscategoriaComponent } from './productos/listarproductosca
 import { ListarproductosclienteComponent } from './cliente/listarproductoscliente/listarproductoscliente.component';
 import { HomeComponent } from './home/home.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ListarproductosestadoComponent } from './productos/listarproductosestado/listarproductosestado.component';
+import { DetalleproductoComponent } from './productos/detalleproducto/detalleproducto.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { FilterPipe } from './pipes/filter.pipe';
     ListarproductoscategoriaComponent,
     ListarproductosclienteComponent,
     HomeComponent,
-    FilterPipe
+    FilterPipe,
+    ListarproductosestadoComponent,
+    DetalleproductoComponent
   ],
   imports: [
     BrowserModule,
@@ -62,16 +66,18 @@ import { FilterPipe } from './pipes/filter.pipe';
         
       //Productor------------------------------------------------------
     {path: 'listarproductores',component:ListarproductorComponent},
-    {path: 'detalleproductor',component:DetalleproductorComponent},
+    {path: 'detalleproductor/:idproductor',component:DetalleproductorComponent},
     {path: 'registrarproductor',component:RegistroproductorComponent},
     {path: 'modificarproductor/:idproductor',component:ModificarproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
     //Producto---------------------------------------------------------------
-    {path: 'registrarproducto',component:IngresarproductoComponent},
+    {path: 'registrarproducto/:idproductor',component:IngresarproductoComponent},
     {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
     {path: 'modificarproducto/:idproducto',component:ModificarproductoComponent},
     {path: 'listarproductos',component:MostrarproductoComponent},
     {path: 'listarproductoscategoria/:categoriaproducto',component:ListarproductoscategoriaComponent},
+    {path: 'listarestado/:estadoproducto',component:ListarproductosestadoComponent},
+    {path: 'detalleproducto/:idproducto',component:DetalleproductoComponent},
     //Usuario----------------------------------------------------------
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     //{path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},

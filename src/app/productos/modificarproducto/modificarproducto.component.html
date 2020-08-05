@@ -53,7 +53,7 @@
         <div class="row">
           <div class="col ">
             <div class="mx-auto">
-              <div class="input-group mb-3" style="width: 440px;">
+              <div class="input-group mb-3" >
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="precioproducto"
                     style="font-family: Verdana; font-size: 16px; ">Precio de producto</label>
@@ -66,8 +66,57 @@
 
           </div>
 
+          <div class="col ">
+            <div class="mx-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label for="estadoproducto" class="input-group-text"
+                    style="font-family: Verdana; font-size: 16px">Estado</label>
+                </div>
+                <select id="estadoproducto" name="estadoproducto"  [(ngModel)]="producto.estadoproducto" class="custom-select" >
+                  <option selected>Seleccionar...</option>
+                  <option value="Activo">Activo</option>
+                  <option value="Inactivo">Inactivo</option>
+                </select>
+              </div>
+            </div>
+          </div>
        
         </div>
+        <div class="row ">
+          <div class="col ">
+            <div class="mx-auto">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label for="categoriaproducto" class="input-group-text"
+                    style="font-family: Verdana; font-size: 16px">Categoria</label>
+                </div>
+                <select id="categoriaproducto" name="categoriaproducto" [(ngModel)]="producto.categoriaproducto"
+                  class="custom-select">
+                  <option selected>Seleccionar...</option>
+                  <option value="granos">Granos secos</option>
+                  <option value="cereales">Cereales</option>
+                  <option value="fruta">Frutas</option>
+                  <option value="verduras">Verduras</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+
+            <div class="">
+              <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                  <label for="descripcionproducto" class="input-group-text">Descripción</label>
+                </div>
+                <textarea type="input"class="form-control" id="descripcionproducto" name="descripcionproducto" [(ngModel)]="producto.descripcionproducto"
+                  rows="1" required pattern="[A-Z a-z]{1,255}"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <br>
         <div class="row">
 

@@ -23,6 +23,10 @@ export class ProductoService {
     return this.httpClient.get<Producto[]>(this.productoURL+`/listar/${categoriaproducto}`);
   }
 
+  public listarestado(estadoproducto: string): Observable<Producto[]>{
+    return this.httpClient.get<Producto[]>(this.productoURL+`/listar/estado/${estadoproducto}`);
+  }
+
   public detail(idproducto: number): Observable<Producto>{
     return this.httpClient.get<Producto>(this.productoURL+`detail/${idproducto}`);
   }
@@ -32,7 +36,7 @@ export class ProductoService {
   }
 
   public save(producto: Producto):Observable<any>{
-    return this.httpClient.post<any>(this.productoURL+'create',producto);
+    return this.httpClient.post<any>(this.productoURL+'create/${idproductor}',producto);
   }
 
   public update(idproducto: number,producto: Producto):Observable<any>{

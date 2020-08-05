@@ -1,1 +1,38 @@
-<p>detalleproductor works!</p>
+<div class="row mt-3" *ngIf="productor">
+    <div class="col-md-4 mx-auto">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+        
+                    <div class="card hovercard">
+                        <div class="cardheader">
+        
+                        </div>
+                        <div class="avatar">
+                            <img alt="" src="http://lorempixel.com/100/100/people/9/">
+                        </div>
+                        <div class="info">
+                            <div class="title">
+                                <a target="_blank" >{{productor.nombreproductor}}{{productor.apellidoproductor}}</a>
+                            </div>
+                            <div class="desc">{{productor.emailproductor}}</div>
+                            <div class="desc">{{productor.telefonoproductor}}</div>
+                        </div>
+                        <div class="row">
+                            <a class="btn btn-outline-primary mx-auto text-dark " (click)="volver()">
+                                <i class="fa fa-arrow-circle-left"></i>Volver
+                            </a>
+                            <a class="btn btn-outline-secondary mx-auto text-dark" routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
+                        </div>
+                        <br>
+                    </div>
+        
+                </div>
+        
+            </div>
+        </div>
+
+    </div>
+
+</div>

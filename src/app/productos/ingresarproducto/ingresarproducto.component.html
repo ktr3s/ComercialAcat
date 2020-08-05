@@ -1,20 +1,20 @@
 <br>
 <div class="container " style="width: 50rem; background-color:#29814A; ">
 
-  <h2 >
+  <h2>
     <p class="text-center font-weight-bold " style="color: white;">Registrar producto</p>
   </h2>
 
   <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
 
-    <h4 ><label class="badge badge-secondary mx-auto">Datos
+    <h4><label class="badge badge-secondary mx-auto">Datos
         requeridos</label></h4>
     <div class="card">
       <div class="card-body">
 
         <br>
- 
-        
+
+
         <div class="row">
 
 
@@ -22,10 +22,11 @@
             <div class="mx-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <label for="nombreproducto"class="input-group-text"
+                  <label for="nombreproducto" class="input-group-text"
                     style="font-family: Verdana; font-size: 16px">Nombre de producto</label>
                 </div>
-                <input type="text" class="form-control"  id="nombreproducto"  name="nombreproducto"   [(ngModel)]="nombreproducto" aria-label="Sizing example input"
+                <input type="text" class="form-control" id="nombreproducto" name="nombreproducto"
+                  [(ngModel)]="nombreproducto" aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default" placeholder="nombre de producto..." minlength="3"
                   maxlength="30" required pattern="[A-Z a-z]{1,60}"
                   title="Solo se permiten letras mayúsculas y minúsculas">
@@ -40,12 +41,14 @@
             <div class="mx-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <label for="pesoproducto"class="input-group-text"  style="font-family: Verdana; font-size: 16px">Peso de
+                  <label for="pesoproducto" class="input-group-text" style="font-family: Verdana; font-size: 16px">Peso
+                    de
                     producto</label>
                 </div>
-                <input step ="any" type="number" id="pesoproducto" name="pesoproducto"   [(ngModel)]="pesoproducto"   min=1 max=1000 class="form-control" aria-label="Sizing example input"
+                <input step="any" type="number" id="pesoproducto" name="pesoproducto" [(ngModel)]="pesoproducto" min=1
+                  max=1000 class="form-control" aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default" placeholder="Peso de producto..." required
-                   title="Solo se permiten numeros">
+                  title="Solo se permiten numeros">
               </div>
             </div>
 
@@ -57,16 +60,16 @@
             <div class="mx-auto">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <label for="precioproducto" class="input-group-text" 
+                  <label for="precioproducto" class="input-group-text"
                     style="font-family: Verdana; font-size: 16px">Precio de producto</label>
                 </div>
                 <!-- relacionar el html con los servicios  -->
-                <input step="any" type="number" id="precioproducto" name="precioproducto"   [(ngModel)]="precioproducto"  min=1 max=500 class="form-control" aria-label="Sizing example input"
+                <input step="any" type="number" id="precioproducto" name="precioproducto" [(ngModel)]="precioproducto"
+                  min=1 max=500 class="form-control" aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default" placeholder="Precio de producto..." required
-                   title="Solo se permiten numeros">
+                  title="Solo se permiten numeros">
               </div>
             </div>
-
           </div>
 
           <div class="col ">
@@ -76,7 +79,7 @@
                   <label for="estadoproducto" class="input-group-text"
                     style="font-family: Verdana; font-size: 16px">Estado</label>
                 </div>
-                <select id="estadoproducto" name="estadoproducto"  [(ngModel)]="estadoproducto" class="custom-select" >
+                <select id="estadoproducto" name="estadoproducto" [(ngModel)]="estadoproducto" class="custom-select">
                   <option selected>Seleccionar...</option>
                   <option value="Activo">Activo</option>
                   <option value="Inactivo">Inactivo</option>
@@ -84,7 +87,9 @@
               </div>
             </div>
           </div>
-          
+
+        </div>
+        <div class="row ">
           <div class="col ">
             <div class="mx-auto">
               <div class="input-group mb-3">
@@ -92,7 +97,8 @@
                   <label for="categoriaproducto" class="input-group-text"
                     style="font-family: Verdana; font-size: 16px">Categoria</label>
                 </div>
-                <select id="categoriaproducto" name="categoriaproducto"  [(ngModel)]="categoriaproducto" class="custom-select" >
+                <select id="categoriaproducto" name="categoriaproducto" [(ngModel)]="categoriaproducto"
+                  class="custom-select">
                   <option selected>Seleccionar...</option>
                   <option value="granos">Granos secos</option>
                   <option value="cereales">Cereales</option>
@@ -102,35 +108,42 @@
               </div>
             </div>
           </div>
+
+          <div class="col">
+
+            <div class="">
+              <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                  <label for="descripcionproducto" class="input-group-text">Descripción</label>
+                </div>
+                <textarea class="form-control" id="descripcionproducto" name="descripcionproducto" [(ngModel)]="descripcionproducto"
+                  rows="1" required pattern="[A-Z a-z]{1,300}"></textarea>
+              </div>
+            </div>
+          </div>
         </div>
+
+
+
         <br>
         <div class="row">
-
-
-
-
-
           <div class="container-fluid h-100" id="botones">
             <div class="row w-100 align-items-center">
               <div class="col text-right">
-                <button type="submit" class="btn btn-success" [disabled]="!f.valid" >
+                <button type="submit" class="btn btn-success" [disabled]="!f.valid">
                   <i class="fa fa-save"></i> Guardar</button>
               </div>
 
               <div class="col text-left">
-                <button type="reset" class="btn btn-danger"  >
+                <button type="reset" class="btn btn-danger">
                   <i class="fa fa-window-close"></i> Cancelar</button>
               </div>
 
             </div>
 
           </div>
-
-
           <br>
         </div>
-        <br>
-
       </div>
     </div>
     <br>

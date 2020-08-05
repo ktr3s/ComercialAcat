@@ -25,9 +25,11 @@
                 <td>{{producto.estadoproducto}}</td>
                 <td>{{producto.categoriaproducto}}</td>
                 <td>
-                    <a class="btn btn-info col-sm-9 " routerLink="/modificarproducto/{{producto.idproducto}}" ><i class="fa fa-edit"></i>Editar</a>
+                    <a class="btn btn-info col-sm-9 " routerLink="/detalleproducto/{{producto.idproducto}}" ><i class="fa fa-eye"></i> Ver</a>
                     <br>
-                    <a class="btn btn-danger col-sm-9" (click)="borrar(producto.idproducto)"><i class="fa fa-trash"></i>Eliminar</a>
+                    <a class="btn btn-info col-sm-9 " routerLink="/modificarproducto/{{producto.idproducto}}" ><i class="fa fa-edit"></i> Editar</a>
+                    <br>
+                    <a class="btn btn-danger col-sm-9" (click)="borrar(producto.idproducto)"><i class="fa fa-trash"></i> Eliminar</a>
                 </td>
             </tr>
         </tbody>
