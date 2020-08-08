@@ -42,8 +42,7 @@
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <label for="pesoproducto" class="input-group-text" style="font-family: Verdana; font-size: 16px">Peso
-                    de
-                    producto</label>
+                    de producto</label>
                 </div>
                 <input step="any" type="number" id="pesoproducto" name="pesoproducto" [(ngModel)]="pesoproducto" min=1
                   max=1000 class="form-control" aria-label="Sizing example input"
@@ -135,7 +134,7 @@
               </div>
 
               <div class="col text-left">
-                <button type="reset" class="btn btn-danger">
+                <button class="btn btn-danger" (click)="volver()" >
                   <i class="fa fa-window-close"></i> Cancelar</button>
               </div>
 

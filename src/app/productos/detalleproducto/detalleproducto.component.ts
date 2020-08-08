@@ -32,7 +32,7 @@ export class DetalleproductoComponent implements OnInit {
     );
   }
   volver(): void{
-    this.router.navigate(['/listarproductos']);
+    this.router.navigate(['/acat_admin/listarproductos']);
   }
 
 }

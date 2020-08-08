@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductoService} from '../../service/producto.service';
-import {Producto} from '../../models/producto';
+import { Producto } from 'src/app/models/producto';
+import { ProductoService } from 'src/app/service/producto.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'app-listarproductoscategoria',
-  templateUrl: './listarproductoscategoria.component.html',
-  styleUrls: ['./listarproductoscategoria.component.css']
+  selector: 'app-categorias',
+  templateUrl: './categorias.component.html',
+  styleUrls: ['./categorias.component.css']
 })
-export class ListarproductoscategoriaComponent implements OnInit {
+export class CategoriasComponent implements OnInit {
+
   category: string;
   title: string;
   productos: Producto[];
@@ -60,4 +61,5 @@ export class ListarproductoscategoriaComponent implements OnInit {
 
     );
   }
+
 }

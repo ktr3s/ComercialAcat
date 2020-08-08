@@ -1,7 +1,7 @@
 <br>
 <div class="container " *ngIf="productor" style="width: 50rem; background-color:#29814A ">
     <h2>
-        <p class="text-center font-weight-bold " style="font-family: Verdana;font-size: 60px; color: white;">
+        <p class="text-center font-weight-bold " >
             Modificar datos </p>
     </h2>
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -14,7 +14,7 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label for="nombreproductor" class="input-group-text" 
-                                        style="font-family: Verdana; font-size: 16px">Nombre</label>
+                                        >Nombre</label>
                                 </div>
                                 <input type="text" class="form-control" id="nombreproductor"  name="nombreproductor"
                                  [(ngModel)]="productor.nombreproductor" required placeholder="Ingrese su nombre"
@@ -26,7 +26,7 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="apellidoproductor"
-                                        style="font-family: Verdana; font-size: 16px">Apellido</label>
+                                        >Apellido</label>
                                 </div>
                                 <input type="text" class="form-control" aria-label="Sizing example input"
                                     aria-describedby="inputGroup-sizing-default" id="apellidoproductor"  name="apellidoproductor" [(ngModel)]="productor.apellidoproductor" required placeholder="Ingrese su apellido"
@@ -41,7 +41,7 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="emailproductor"
-                                            style="font-family: Verdana; font-size: 16px">Email</label>
+                                            >Email</label>
                                     </div>
                                     <input type="email" class="form-control" id="emailproductor"  name="emailproductor" [(ngModel)]="productor.emailproductor" required aria-describedby="emailHelp"
                                         placeholder="Ingrese su direccion de correo">
@@ -53,7 +53,7 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="claveproductor"
-                                            style="font-family: Verdana; font-size: 16px">Contraseña</label>
+                                            >Contraseña</label>
                                     </div>
                                     <input type="password" minlength="8" maxlength="30" class="form-control" id="claveproductor"  name="productor.claveproductor" [(ngModel)]="claveproductor" required
                                         placeholder="Ingrese una contraseña">
@@ -68,7 +68,7 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="telefonoproductor"
-                                            style="font-family: Verdana; font-size: 16px">Teléfono</label>
+                                            >Teléfono</label>
                                     </div>
                                     <input type="tel" class="form-control" id="telefonoproductor"  name="telefonoproductor" [(ngModel)]="productor.telefonoproductor" required
                                         placeholder="Ingrese su numero de teléfono" minlength="9" maxlength="14"
@@ -81,7 +81,7 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="claveproductor"
-                                            style="font-family: Verdana; font-size: 16px">Verificar contraseña</label>
+                                            >Verificar contraseña</label>
                                     </div>
                                     <input type="password" minlength="8" maxlength="30" class="form-control"  required
                                         placeholder="Ingrese nuevamente la contraseña">
@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="col text-center">
-                        <button  type="reset" class="btn btn-danger" ><i class="fa fa-window-close"></i>
+                        <button   class="btn btn-danger" (click)="volver()"><i class="fa fa-window-close"></i>
                             Cancelar</button>
                     </div>
 

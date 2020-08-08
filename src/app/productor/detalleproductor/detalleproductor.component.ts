@@ -32,7 +32,7 @@ export class DetalleproductorComponent implements OnInit {
   }
 
   volver(): void{
-    this.router.navigate(['/listarproductores']);
+    this.router.navigate(['acat_admin/listarproductores']);
   }
 
 }

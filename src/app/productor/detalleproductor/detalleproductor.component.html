@@ -14,7 +14,7 @@
                         </div>
                         <div class="info">
                             <div class="title">
-                                <a target="_blank" >{{productor.nombreproductor}}{{productor.apellidoproductor}}</a>
+                                <a target="_blank" >{{productor.nombreproductor}} {{productor.apellidoproductor}}</a>
                             </div>
                             <div class="desc">{{productor.emailproductor}}</div>
                             <div class="desc">{{productor.telefonoproductor}}</div>
@@ -23,7 +23,7 @@
                             <a class="btn btn-outline-primary mx-auto text-dark " (click)="volver()">
                                 <i class="fa fa-arrow-circle-left"></i>Volver
                             </a>
-                            <a class="btn btn-outline-secondary mx-auto text-dark" routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
+                            <a class="btn btn-outline-secondary mx-auto text-dark" routerLink="/acat_admin/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
                         </div>
                         <br>
                     </div>

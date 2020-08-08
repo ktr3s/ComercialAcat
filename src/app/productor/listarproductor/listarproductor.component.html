@@ -25,15 +25,15 @@
                 <td>{{productor.emailproductor}}</td>
                 <td>{{productor.claveproductor}}</td>
                 <td>{{productor.telefonoproductor}}</td>
-                <td>
-                    <a class="btn btn-primary col " routerLink="/detalleproductor/{{productor.idproductor}}" ><i class="fa fa-eye"></i>Ver</a>
+                <td class="col-12">
+                    <a class="btn btn-primary col " routerLink="/acat_admin/detalleproductor/{{productor.idproductor}}" ><i class="fa fa-eye"></i> Ver</a>
                     <br>
-                    <a class="btn btn-secondary col " routerLink="/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i>Editar</a>
+                    <a class="btn btn-secondary col " routerLink="/acat_admin/modificarproductor/{{productor.idproductor}}" ><i class="fa fa-edit"></i> Editar</a>
                     <br>
-                    <a class="btn btn-danger col" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i>Eliminar</a>
+                    <a class="btn btn-danger col text-white" (click)="borrar(productor.idproductor)"><i class="fa fa-trash"></i> Eliminar</a>
                 </td>
                 <td>
-                    <a class="btn btn-primary col  " routerLink="/listarproductos/{{productor.idproductor}}" ><i class="fa fa-eye"></i>Ver productos</a>
+                    <a class="btn btn-primary  " routerLink="/listarproductos/{{productor.idproductor}}" ><i class="fa fa-eye"></i> Ver productos</a>
                 </td>
             </tr>
         </tbody>

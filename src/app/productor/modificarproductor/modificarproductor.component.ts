@@ -44,4 +44,8 @@ export class ModificarproductorComponent implements OnInit {
     );
   }
 
+  volver(): void{
+    this.router.navigate(['acat_admin/listarproductores']);
+  }
+
 }

@@ -36,11 +36,14 @@ export class ModificarproductoComponent implements OnInit {
     this.productoService.update(idproducto, this.producto).subscribe(
       data => {
         alert('Producto actualizado con exito');
-        this.router.navigate(['/listarproductos']);
+        this.router.navigate(['/acat_admin/listarproductos']);
       },
       err=>{
         alert(err.error.mensaje + 'Fallo');
       }
     );
+  }
+  volver(): void{
+    this.router.navigate(['/acat_admin/listarproductos']);
   }
 }

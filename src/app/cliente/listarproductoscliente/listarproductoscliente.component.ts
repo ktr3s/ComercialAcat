@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductoService} from '../../service/producto.service';
 import {Producto} from '../../models/producto';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-listarproductoscliente',
@@ -10,22 +11,29 @@ import {Producto} from '../../models/producto';
 export class ListarproductosclienteComponent implements OnInit {
 
   productos: Producto[];
+  
 
-  constructor(private productoService: ProductoService) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private productoService: ProductoService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.cargarProductos();
+    
   }
 
   cargarProductos(): void{
-    this.productoService.listar().subscribe(
+    
+    const estadoproducto = 'Activo';
+    this.productoService.listarestado(estadoproducto).subscribe(
       data => {
-        this.productos = data;
+        this.productos=data;
       },
       err => {
-        console.log(err);
+        alert(err.error.mensaje + 'Fallo');
+        //this.router.navigate(['/']);
       }
-    )
+    );
   }
 
   borrar(idproducto: number){

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductorService } from 'src/app/service/productor.service';
 import { Productor } from 'src/app/models/productor';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registroproductor',
@@ -16,7 +17,7 @@ export class RegistroproductorComponent implements OnInit {
   telefonoproductor: string ='';
 
 
-  constructor(private productorService: ProductorService) { }
+  constructor(private router: Router, private productorService: ProductorService) { }
 
   ngOnInit(): void {
   }
@@ -26,11 +27,16 @@ export class RegistroproductorComponent implements OnInit {
     this.productorService.save(productor).subscribe(
       data => {
         alert('Productor guardado con exito');
+        this.router.navigate(['acat_admin/listarproductores']);
       },
       err=>{
         alert(err.error.mensaje + 'Fallo');
       }
     );
+  }
+  
+  volver(): void{
+    this.router.navigate(['acat_admin/listarproductores']);
   }
 
 }

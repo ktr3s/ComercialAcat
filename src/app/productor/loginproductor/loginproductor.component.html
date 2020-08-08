@@ -4,7 +4,7 @@
         <h2 style="font-family: Verdana;">
             <p class="text-center font-weight-bold " style="color: white;">Iniciar sesión</p>
         </h2>
-        <form action="" method="POST">
+        <form >
             <h4 style="font-family: Verdana;"><span class="badge badge-secondary mx-auto">Datos
                     requeridos</span></h4>
             <div class="card">
@@ -15,9 +15,7 @@
                     <br>
                     <div class="input-group mb-3 mx-auto" style="width: 400px; ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="nombreUsuario"
-                                style="font-family: Verdana; ">Nombre
-                                de usuario</span>
+                            <span class="input-group-text" id="emailusuario" name="emailusuario" >Email de usuario</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default" placeholder="nombre de usuario..."
@@ -26,13 +24,12 @@
                     </div>
                     <div class="input-group mb-3 mx-auto" style="width: 400px; ">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="contraseña"
-                                style="font-family: Verdana; ">Contraseña</span>
+                            <span class="input-group-text" id="claveusuario" name="claveusuario" >Contraseña</span>
                         </div>
                         <input type="password" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default" placeholder="contraseña..." minlength="8"
                             maxlength="30" required pattern="[A-Z a-z]{5,60}"
-                            title="Solo se permiten letras mayúsculas y minúsculas">
+                            title="Solo se permiten letras mayúsculas, minúsculas y números ">
                     </div>
                 </div>
 

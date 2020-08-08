@@ -28,6 +28,10 @@ import { HomeComponent } from './home/home.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ListarproductosestadoComponent } from './productos/listarproductosestado/listarproductosestado.component';
 import { DetalleproductoComponent } from './productos/detalleproducto/detalleproducto.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { adminRoutes } from './admin/admin.routes';
+import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
+import { CategoriasComponent } from './cliente/categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,10 @@ import { DetalleproductoComponent } from './productos/detalleproducto/detallepro
     HomeComponent,
     FilterPipe,
     ListarproductosestadoComponent,
-    DetalleproductoComponent
+    DetalleproductoComponent,
+    DashboardComponent,
+    NavbarAdminComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -65,28 +72,31 @@ import { DetalleproductoComponent } from './productos/detalleproducto/detallepro
       [
         
       //Productor------------------------------------------------------
-    {path: 'listarproductores',component:ListarproductorComponent},
-    {path: 'detalleproductor/:idproductor',component:DetalleproductorComponent},
-    {path: 'registrarproductor',component:RegistroproductorComponent},
-    {path: 'modificarproductor/:idproductor',component:ModificarproductorComponent},
+    //{path: 'listarproductores',component:ListarproductorComponent},
+    //{path: 'detalleproductor/:idproductor',component:DetalleproductorComponent},
+    //{path: 'registrarproductor',component:RegistroproductorComponent},
+    //{path: 'modificarproductor/:idproductor',component:ModificarproductorComponent},
     {path: 'loginproductor',component:LoginproductorComponent},
     //Producto---------------------------------------------------------------
-    {path: 'registrarproducto/:idproductor',component:IngresarproductoComponent},
-    {path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
-    {path: 'modificarproducto/:idproducto',component:ModificarproductoComponent},
-    {path: 'listarproductos',component:MostrarproductoComponent},
-    {path: 'listarproductoscategoria/:categoriaproducto',component:ListarproductoscategoriaComponent},
-    {path: 'listarestado/:estadoproducto',component:ListarproductosestadoComponent},
-    {path: 'detalleproducto/:idproducto',component:DetalleproductoComponent},
+    //{path: 'registrarproducto/:idproductor',component:IngresarproductoComponent},
+    //{path: 'modificarestadoproducto',component:ModificarestadoproductoComponent},
+    //{path: 'modificarproducto/:idproducto',component:ModificarproductoComponent},
+    //{path: 'listarproductos',component:MostrarproductoComponent},
+    //{path: 'listarproductoscategoria/:categoriaproducto',component:ListarproductoscategoriaComponent},
+    //{path: 'listarestado/:estadoproducto',component:ListarproductosestadoComponent},
+    //{path: 'detalleproducto/:idproducto',component:DetalleproductoComponent},
     //Usuario----------------------------------------------------------
-    {path: 'registrarusuario',component:RegistrarusuarioComponent},
+    //{path: 'registrarusuario',component:RegistrarusuarioComponent},
     //{path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
-    {path: 'modificarusuarios/:idusuario',component:ModificarusuariosComponent},
-    {path: 'listarusuarios',component:ListarusuariosComponent},
+    //{path: 'modificarusuarios/:idusuario',component:ModificarusuariosComponent},
+    //{path: 'listarusuarios',component:ListarusuariosComponent},
     //Cliente--------------------------------------------------------------
-    {path: 'listartodoslosproductos',component:ListarproductosclienteComponent},
+    {path: 'productos',component:ListarproductosclienteComponent},
+    {path: 'categoria/:categoriaproducto',component:CategoriasComponent},
     {path: '',component:HomeComponent},
-    
+    //Admin------------------------------------------------------------------------
+    {path: 'acat_admin',component:AdminComponent, children: adminRoutes},
+    //-----------------------------------------------------------------------------
     {path: '**', component: PageNotFoundComponent},
     
     

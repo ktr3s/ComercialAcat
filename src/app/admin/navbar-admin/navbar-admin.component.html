@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg text-white" id="navbar" >
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Productores
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/acat_admin/listarproductores">Ver Productores</a></li>
+            <li><a class="dropdown-item" routerLink="/acat_admin/registrarproductor">Registar un productor</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+             <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Ver productos</a>
+              <ul class="dropdown-menu">
+                <a class="dropdown-item" routerLink="/acat_admin/listarproductos">Todos</a>
+                <a class="dropdown-item" routerLink="/acat_admin/listarestado/{{'Activo'}}">Activos</a>
+                <a class="dropdown-item" routerLink="/acat_admin/listarestado/{{'Inactivo'}}">Inactivos</a>
+              </ul>
+            </li>
+            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Categorias</a>
+              <ul class="dropdown-menu">
+                <a class="dropdown-item" routerLink="/acat_admin/listarproductoscategoria/{{'granos'}}">Granos secos</a>
+            <a class="dropdown-item" routerLink="/acat_admin/listarproductoscategoria/{{'cereales'}}">Cereales</a>
+            <a class="dropdown-item" routerLink="/acat_admin/listarproductoscategoria/{{'fruta'}}">Frutas</a>
+            <a class="dropdown-item" routerLink="/acat_admin/listarproductoscategoria/{{'verduras'}}">Verduras</a>
+              </ul>
+            </li>
+            <li><a class="dropdown-item" routerLink="/acat_admin/registrarproducto/:idproductor">Registar un producto</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Usuarios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/acat_admin/listarusuarios">Ver Usuarios</a></li>
+            <li><a class="dropdown-item" routerLink="/acat_admin/registrarusuario">Registar un Usuario</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+    <a class="navbar-brand text-white" routerLink="/acat_admin">ADMIN</a>
+  </nav>
+

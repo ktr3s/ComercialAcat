@@ -38,6 +38,7 @@ export class ModificarusuariosComponent implements OnInit {
     this.usuarioService.update(idusuario, this.usuario).subscribe(
       data => {
         alert('Usuario actualizado con exito');
+        this.router.navigate(['/acat_admin/listarusuarios']);
       },
       err=>{
         alert(err.error.mensaje + 'Fallo');
@@ -45,5 +46,7 @@ export class ModificarusuariosComponent implements OnInit {
     );
   } 
 
-
+  volver(): void{
+    this.router.navigate(['/acat_admin/listarusuarios']);
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService} from 'src/app/service/usuario.service';
 import { Usuario} from 'src/app/models/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrarusuario',
@@ -17,7 +18,7 @@ export class RegistrarusuarioComponent implements OnInit {
   direccionusuario: string ='';
 
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private router: Router,private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +28,7 @@ export class RegistrarusuarioComponent implements OnInit {
     this.usuarioService.save(usuario).subscribe(
       data => {
         alert('Usuario guardado con exito');
+        this.router.navigate(['/acat_admin/listarusuarios']);
       },
       err=>{
         alert(err.error.mensaje + 'Fallo');
@@ -34,4 +36,7 @@ export class RegistrarusuarioComponent implements OnInit {
     );
   }
 
+  volver(): void{
+    this.router.navigate(['/acat_admin/listarusuarios']);
+  }
 }

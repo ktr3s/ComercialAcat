@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProductoService} from 'src/app/service/producto.service';
 import {Producto} from 'src/app/models/producto';
 import { Productor } from 'src/app/models/productor';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ingresarproducto',
@@ -19,7 +20,7 @@ export class IngresarproductoComponent implements OnInit {
     Productor: Productor;
    
     
-    constructor(private productoService: ProductoService) { }
+    constructor(private router: Router,private productoService: ProductoService) { }
   
     ngOnInit(): void {
     }
@@ -35,6 +36,10 @@ export class IngresarproductoComponent implements OnInit {
           alert(err.error.mensaje + 'Fallo');
         }
       );
+    }
+
+    volver(): void{
+      this.router.navigate(['/acat_admin/listarproductos']);
     }
   
 }

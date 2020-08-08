@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductoService} from '../../service/producto.service';
 import {Producto} from '../../models/producto';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-listarproductosestado',
@@ -16,7 +16,22 @@ export class ListarproductosestadoComponent implements OnInit {
     private productoService: ProductoService,
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ) { }
+  ) { 
+
+    // override the route reuse strategy
+    this.router.routeReuseStrategy.shouldReuseRoute = function(){
+      return false;
+   }
+
+   this.router.events.subscribe((evt) => {
+      if (evt instanceof NavigationEnd) {
+         // trick the Router into believing it's last link wasn't previously loaded
+         this.router.navigated = false;
+         // if you need to scroll back to top, here is the right place
+         window.scrollTo(0, 0);
+      }
+  });
+  }
 
   ngOnInit(): void {
     const estadoproducto = this.activatedRoute.snapshot.params.estadoproducto;
@@ -43,4 +58,6 @@ export class ListarproductosestadoComponent implements OnInit {
 
     );
   }
+
+  
 }
