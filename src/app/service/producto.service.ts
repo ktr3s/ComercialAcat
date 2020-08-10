@@ -11,6 +11,7 @@ export class ProductoService {
 
  
   productoURL = 'http://localhost:8080/producto/'
+  productos: Producto[];
 
   
   constructor(private httpClient: HttpClient) { }

@@ -11,6 +11,7 @@ import {ProductorService} from '../../service/productor.service';
 export class ListarproductorComponent implements OnInit {
 
   productores: Productor[];
+  filterProductor='';
 
   constructor(private productorService: ProductorService) { }
 

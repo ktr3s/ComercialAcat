@@ -2,7 +2,7 @@
 <div class="container">
 <div class="col-lg">
     <h2 style="color: black;">Buscar</h2>
-    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <input class="form-control" type="text" name="filterProductor"placeholder="Search.." [(ngModel)]="filterProductor">
     <br>
     <table class="table table-bordered table-striped">
         <thead>
@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody id="myTable">
-            <tr *ngFor="let productor of productores">
+            <tr *ngFor="let productor of productores | filterProductor:filterProductor">
                 <td>{{productor.idproductor}}</td>
                 <td>{{productor.nombreproductor}}</td>
                 <td>{{productor.apellidoproductor}}</td>
@@ -40,13 +40,4 @@
     </table>
 </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>
+

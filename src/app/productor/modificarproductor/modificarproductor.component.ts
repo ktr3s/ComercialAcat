@@ -37,6 +37,7 @@ export class ModificarproductorComponent implements OnInit {
     this.productorService.update(idproductor, this.productor).subscribe(
       data => {
         alert('Productor actualizado con exito');
+        this.router.navigate(['acat_admin/listarproductores']);
       },
       err=>{
         alert(err.error.mensaje + 'Fallo');

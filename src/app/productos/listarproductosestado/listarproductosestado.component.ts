@@ -12,6 +12,7 @@ export class ListarproductosestadoComponent implements OnInit {
 
   productos: Producto[];
   producto: Producto = null;
+  filterProducto='';
   constructor(
     private productoService: ProductoService,
     private activatedRoute: ActivatedRoute,
@@ -22,7 +23,7 @@ export class ListarproductosestadoComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = function(){
       return false;
    }
-
+   
    this.router.events.subscribe((evt) => {
       if (evt instanceof NavigationEnd) {
          // trick the Router into believing it's last link wasn't previously loaded

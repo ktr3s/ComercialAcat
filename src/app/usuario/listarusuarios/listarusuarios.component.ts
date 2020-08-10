@@ -10,7 +10,7 @@ import {UsuarioService} from '../../service/usuario.service';
 export class ListarusuariosComponent implements OnInit {
 
   usuarios: Usuario[];
-
+  filterUsuario='';
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {

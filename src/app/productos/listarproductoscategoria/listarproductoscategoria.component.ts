@@ -13,6 +13,7 @@ export class ListarproductoscategoriaComponent implements OnInit {
   title: string;
   productos: Producto[];
   producto: Producto = null;
+  filterProducto='';
   constructor(
     private productoService: ProductoService,
     private activatedRoute: ActivatedRoute,

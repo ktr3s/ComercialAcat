@@ -11,9 +11,11 @@ import {Producto} from '../../models/producto';
 export class MostrarproductoComponent implements OnInit {
 
   productos: Producto[];
-  filterProducto='';
+  
   constructor(private productoService: ProductoService) { }
 
+  filterProducto='';
+  
   ngOnInit(): void {
     this.cargarProductos();
   }

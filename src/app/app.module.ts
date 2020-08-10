@@ -32,6 +32,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { adminRoutes } from './admin/admin.routes';
 import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 import { CategoriasComponent } from './cliente/categorias/categorias.component';
+import { FilterProductorPipe } from './pipes/filter-productor.pipe';
+import { FilterUserPipe } from './pipes/filter-user.pipe';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { CategoriasComponent } from './cliente/categorias/categorias.component';
     DetalleproductoComponent,
     DashboardComponent,
     NavbarAdminComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    FilterProductorPipe,
+    FilterUserPipe,
   ],
   imports: [
     BrowserModule,
