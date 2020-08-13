@@ -11,8 +11,7 @@ export class FilterPipe implements PipeTransform {
     for (const producto of value) {
       if (producto.nombreproducto.toLowerCase().indexOf(arg.toLowerCase()) > -1 ||
       producto.estadoproducto.toLowerCase().indexOf(arg.toLowerCase()) > -1 ||
-      producto.categoriaproducto.toLowerCase().indexOf(arg.toLowerCase()) > -1 ||
-      producto.pesoproducto.toLowerCase().indexOf(arg.toLowerCase()) > -1 
+      producto.categoriaproducto.toLowerCase().indexOf(arg.toLowerCase()) > -1 
       ) {
         resultProductos.push(producto);
       };

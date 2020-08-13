@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -7,19 +8,23 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  router: any;
-
-  //router: string;
-
-  constructor(){}
+  router: string;
+  
+  
+  constructor(private _router: Router){
+    this.router = _router.url; 
+    
+  }
    
   filterProducto='';
 
   ngOnInit(): void {
   }
-  
+
+  /*
   buscarPalabra(palabraBuscada:string){
     this.router.navigate(['productos/',palabraBuscada]);
   }
+*/
 
 }

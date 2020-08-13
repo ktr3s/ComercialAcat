@@ -18,7 +18,7 @@ import { DetalleproductorComponent } from './productor/detalleproductor/detallep
 import { ModificarestadoproductoComponent } from './productos/modificarestadoproducto/modificarestadoproducto.component';
 import { ListarusuariosComponent } from './usuario/listarusuarios/listarusuarios.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { ModificarusuariosComponent } from './usuario/modificarusuarios/modificarusuarios.component';
 import { ModificarproductoComponent } from './productos/modificarproducto/modificarproducto.component';
 import { AdminComponent } from './admin/admin.component';
@@ -34,6 +34,9 @@ import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.componen
 import { CategoriasComponent } from './cliente/categorias/categorias.component';
 import { FilterProductorPipe } from './pipes/filter-productor.pipe';
 import { FilterUserPipe } from './pipes/filter-user.pipe';
+import { LoginAdminComponent } from './admin/login-admin/login-admin.component';
+import { DetalleproductoclienteComponent } from './cliente/detalleproductocliente/detalleproductocliente.component';
+import { CarritoComponent } from './cliente/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -66,11 +69,15 @@ import { FilterUserPipe } from './pipes/filter-user.pipe';
     CategoriasComponent,
     FilterProductorPipe,
     FilterUserPipe,
+    LoginAdminComponent,
+    DetalleproductoclienteComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       
       [
@@ -88,7 +95,7 @@ import { FilterUserPipe } from './pipes/filter-user.pipe';
     //{path: 'listarproductos',component:MostrarproductoComponent},
     //{path: 'listarproductoscategoria/:categoriaproducto',component:ListarproductoscategoriaComponent},
     //{path: 'listarestado/:estadoproducto',component:ListarproductosestadoComponent},
-    //{path: 'detalleproducto/:idproducto',component:DetalleproductoComponent},
+    {path: 'detalleproducto/:idproducto',component:DetalleproductoclienteComponent},
     //Usuario----------------------------------------------------------
     //{path: 'registrarusuario',component:RegistrarusuarioComponent},
     //{path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
@@ -96,6 +103,7 @@ import { FilterUserPipe } from './pipes/filter-user.pipe';
     //{path: 'listarusuarios',component:ListarusuariosComponent},
     //Cliente--------------------------------------------------------------
     {path: 'productos',component:ListarproductosclienteComponent},
+    {path: 'carrito',component:CarritoComponent},
     {path: 'categoria/:categoriaproducto',component:CategoriasComponent},
     {path: '',component:HomeComponent},
     //Admin------------------------------------------------------------------------

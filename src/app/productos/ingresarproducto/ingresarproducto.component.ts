@@ -31,6 +31,7 @@ export class IngresarproductoComponent implements OnInit {
         
         data => {
           alert('Producto guardado con exito!');
+          this.router.navigate(['/acat_admin/listarproductos']);
         },
         err=>{
           alert(err.error.mensaje + 'Fallo');

@@ -1,0 +1,50 @@
+<br>
+<div class="container">
+    <div class="container " style="width: 30rem; background-color:#29814A ">
+        <h2 style="font-family: Verdana;">
+            <p class="text-center font-weight-bold " style="color: white;">Iniciar sesión</p>
+        </h2>
+        <form (ngSubmit)="loginProces()"  >
+            <h4 style="font-family: Verdana;"><label class="badge badge-secondary mx-auto">Datos
+                    requeridos</label></h4>
+            <div class="card">
+                <div class="card-body">
+                    <br>
+                    <img src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png"
+                     alt="Imagen iniciar sesión" class="rounded-circle mx-auto d-block" style="height: 140px; width: 140px;">
+                    <br>
+                    <div class="input-group mb-3 mx-auto" style="width: 400px; ">
+                        <div class="input-group-prepend" >
+                            <label class="input-group-text" for="nombreusuario" >Usuario</label>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" name="nombreusuario" [(ngModel)]="nombreusuario"
+                            aria-describedby="inputGroup-sizing-default" placeholder="nombre de usuario..."
+                            title="Solo se permiten letras mayúsculas y minúsculas" >
+                    </div>
+                    <div class="input-group mb-3 mx-auto" style="width: 400px; ">
+                        <div class="input-group-prepend" >
+                            <label class="input-group-text" for="claveusuario"  >Contraseña</label>
+                        </div>
+                        <input type="password" class="form-control" aria-label="Sizing example input" name="claveusuario" [(ngModel)]="claveusuario"
+                            aria-describedby="inputGroup-sizing-default" 
+                            title="Solo se permiten letras mayúsculas, minúsculas y números ">
+                    </div>
+                </div>
+
+                <div class="container-fluid h-100" id="botones">
+                    
+                        <div class="col text-center">
+                            <button type="submit" class="btn btn-success" style="font-family: Verdana;
+                            "><i class="fa fa-address-card"></i>Iniciar
+                                sesión</button>
+                        </div>
+                
+
+                </div>
+                <br>
+            </div>
+            <br>
+        </form>
+    </div>
+</div>
+<br>

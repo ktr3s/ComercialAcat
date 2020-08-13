@@ -13,9 +13,16 @@ import { ListarproductoscategoriaComponent } from '../productos/listarproductosc
 import { RegistrarusuarioComponent } from '../usuario/registrarusuario/registrarusuario.component';
 import { ModificarusuariosComponent } from '../usuario/modificarusuarios/modificarusuarios.component';
 import { ListarusuariosComponent } from '../usuario/listarusuarios/listarusuarios.component';
+import { LoginAdminComponent } from '../admin/login-admin/login-admin.component';
+
+
+
+const routes: Routes = [];
+
 
 
 export const adminRoutes: Routes =[
+    
     {path:'',component: DashboardComponent},
     {path: 'listarproductores',component:ListarproductorComponent},
     {path: 'detalleproductor/:idproductor',component:DetalleproductorComponent},
@@ -24,10 +31,12 @@ export const adminRoutes: Routes =[
     {path: 'listarproductos',component:MostrarproductoComponent},
     {path: 'detalleproducto/:idproducto',component:DetalleproductoComponent},
     {path: 'modificarproducto/:idproducto',component:ModificarproductoComponent},
-    {path: 'registrarproducto/:idproductor',component:IngresarproductoComponent},
+    {path: 'registrarproducto',component:IngresarproductoComponent},
     {path: 'listarestado/:estadoproducto',component:ListarproductosestadoComponent},
     {path: 'listarproductoscategoria/:categoriaproducto',component:ListarproductoscategoriaComponent},
     {path: 'registrarusuario',component:RegistrarusuarioComponent},
     {path: 'modificarusuarios/:idusuario',component:ModificarusuariosComponent},
     {path: 'listarusuarios',component:ListarusuariosComponent},
+    {path: 'login',component:LoginAdminComponent},
 ];
+
