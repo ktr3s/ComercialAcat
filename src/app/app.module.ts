@@ -97,7 +97,7 @@ import { CarritoComponent } from './cliente/carrito/carrito.component';
     //{path: 'listarestado/:estadoproducto',component:ListarproductosestadoComponent},
     {path: 'detalleproducto/:idproducto',component:DetalleproductoclienteComponent},
     //Usuario----------------------------------------------------------
-    //{path: 'registrarusuario',component:RegistrarusuarioComponent},
+    {path: 'registrarusuario',component:RegistrarusuarioComponent},
     //{path: 'modificarusuario/:idusuario',component:ModificarusuarioComponent},
     //{path: 'modificarusuarios/:idusuario',component:ModificarusuariosComponent},
     //{path: 'listarusuarios',component:ListarusuariosComponent},

@@ -51,9 +51,11 @@ export class ListarproductosclienteComponent implements OnInit {
   }
 
   guardarCarrito(idproducto: number){
-    this.productoService.detail(idproducto).subscribe(
+    this.productoService.alcarrito(idproducto).subscribe(
       data => {
+        
         this.producto = data;
+        alert('Producto añadido al carrito');
       },
       err => {
         alert(err.error.mensaje + 'Fallo');

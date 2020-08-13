@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService} from 'src/app/service/usuario.service';
 import { Usuario} from 'src/app/models/usuario';
 import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-registrarusuario',
@@ -18,7 +19,7 @@ export class RegistrarusuarioComponent implements OnInit {
   direccionusuario: string ='';
 
 
-  constructor(private router: Router,private usuarioService: UsuarioService) { }
+  constructor(private router: Router,private usuarioService: UsuarioService,private _location: Location) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +38,6 @@ export class RegistrarusuarioComponent implements OnInit {
   }
 
   volver(): void{
-    this.router.navigate(['/acat_admin/listarusuarios']);
+    this._location.back();
   }
 }

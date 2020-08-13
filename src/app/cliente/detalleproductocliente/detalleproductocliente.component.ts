@@ -37,5 +37,20 @@ export class DetalleproductoclienteComponent implements OnInit {
     //this.router.navigate(['/']);
     this._location.back();
   }
+  guardarCarrito(idproducto: number){
+    this.productoService.alcarrito(idproducto).subscribe(
+      data => {
+        
+        this.producto = data;
+        alert('Producto añadido al carrito');
+        this.router.navigate(['/carrito']);
+      },
+      err => {
+        alert(err.error.mensaje + 'Fallo');
+        //this.router.navigate(['/']);
+        //this.volver();
+      }
+    );
+  }
 
 }

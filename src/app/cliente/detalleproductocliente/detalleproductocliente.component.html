@@ -11,7 +11,6 @@
           <h6 class=" text-dark">Nombre: {{producto.nombreproducto}}</h6>
           <h6 class=" text-dark">Precio: $ {{producto.precioproducto}}</h6>
           <h6 class=" text-dark">Peso: {{producto.pesoproducto}}</h6>
-          <h6 class=" text-dark">Estado: {{producto.estadoproducto}}</h6>
           <h6 class=" text-dark">Categoria: {{producto.categoriaproducto}}</h6>
         </div>
       </div>
@@ -27,7 +26,7 @@
       <a class="btn btn-primary mx-auto text-white " (click)="volver()">
           <i class="fa fa-arrow-circle-left"></i>Volver
       </a>
-      <a class="btn btn-warning mx-auto text-white" href=""><i class="fa fa-cart-plus"></i> Añadir</a></div>
+      <a class="btn btn-warning mx-auto text-white" (click)="guardarCarrito(producto.idproducto)"><i class="fa fa-cart-plus"></i> Añadir</a></div>
   <br>
   </div>
 </div>

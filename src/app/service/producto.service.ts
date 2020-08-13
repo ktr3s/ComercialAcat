@@ -11,6 +11,7 @@ export class ProductoService {
 
  
   productoURL = 'http://localhost:8080/producto/'
+  carritoURL = 'http://localhost:8080/carrito/'
   productos: Producto[];
 
   
@@ -33,7 +34,7 @@ export class ProductoService {
   }
 
   public alcarrito(idproducto: number): Observable<Producto>{
-    return this.httpClient.get<Producto>(this.productoURL+`alcarrito/${idproducto}`);
+    return this.httpClient.get<Producto>(this.carritoURL+`alcarrito/${idproducto}`);
   }
 
   public detailName(nombreproducto: string): Observable<Producto>{

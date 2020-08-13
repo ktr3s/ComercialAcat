@@ -61,5 +61,20 @@ export class CategoriasComponent implements OnInit {
 
     );
   }
+  
+  guardarCarrito(idproducto: number){
+    this.productoService.alcarrito(idproducto).subscribe(
+      data => {
+        
+        this.producto = data;
+        alert('Producto añadido al carrito');
+      },
+      err => {
+        alert(err.error.mensaje + 'Fallo');
+        //this.router.navigate(['/']);
+        //this.volver();
+      }
+    );
+  }
 
 }
